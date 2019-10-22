@@ -20,6 +20,6 @@ class OrderDetails extends Model
     }
 
     public function dish(){
-        return $this->hasMany('App\Dish');
+        return $this->belongsTo('App\Dish');
     }
 }

@@ -55,6 +55,13 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    @if (Auth::user()->user_type == 'owner')
+                                    <a class="dropdown-item" href="/menu/create">Add dish</a>
+                                    @else
+                                    <a class="dropdown-item" href="/cart">View Cart</a>
+                                    <a class="dropdown-item" href="/order">Order</a>
+                                    @endif
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

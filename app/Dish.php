@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Dish extends Model
 {
     //Table
-    protected $table = 'Dishes';
+    protected $table = 'dish';
 
     // Primary Key
     public $primaryKey = 'id';
@@ -16,6 +16,6 @@ class Dish extends Model
     public $timestamps = true;
 
     public function orderDetails(){
-        return $this->belongsTo('App\OrderDetails');
+        return $this->hasMany('App\OrderDetails');
     }
 }
