@@ -17,7 +17,9 @@
 
 Auth::routes();
 
-Route::get('/', 'DishController@index');
+Route::get('/', function(){
+    return view('mainmenu');
+});
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/owner', 'HomeController@ownerIndex')->name('owner');
 Route::resource('/menu', 'DishController');

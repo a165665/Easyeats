@@ -14,13 +14,13 @@
                                 <div>
                       <div class="d-flex">
                         <div class="one-half">
-                          <h3><a href="/menu/{{$dish->id}}">{{$dish->name}}</a></h3>
+                          <h3>{{$dish->name}}</h3>
                         </div>
                         <div class="one-forth">
                           <span class="price">RM {{$dish->price}}</span>
                         </div>
                       </div>
-                      <p><a href="#" class="btn btn-primary">Details</a></p>
+                      <p><a href="/menu/{{$dish->id}}" class="btn btn-primary">Details</a></p>
                   </div>
               </div>
             </div>

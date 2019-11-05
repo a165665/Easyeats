@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
 <!DOCTYPE html>
@@ -10,6 +10,55 @@
  
   
     <!--  navbar here -->
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
+    	<div class="container-fluid">
+    		<div class="row">
+    			<div class="col-md-12">
+    				<div class="featured">
+    					<div class="row">
+    						<div class="col-md-3">
+    							<div class="featured-menus ftco-animate">
+			              <div class="menu-img img" style="background-image:url({{ asset('/img/Menu_pic/1.jpg') }});"></div>
+			              <div class="text text-center">
+		                  <h3>Vegetarian Spring Row</h3>
+				              <p><span>Vege</span>, <span>Potatoes</span>, <span>Tomatoes</span></p>
+			              </div>
+			            </div>
+    						</div>
+    						<div class="col-md-3">
+    							<div class="featured-menus ftco-animate">
+			              <div class="menu-img img" style="background-image: url({{ asset('/img/Menu_pic/2.jpg') }});"></div>
+			              <div class="text text-center">
+		                  <h3>Samosa</h3>
+				              <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+			              </div>
+			            </div>
+    						</div>
+    						<div class="col-md-3">
+    							<div class="featured-menus ftco-animate">
+			              <div class="menu-img img" style="background-image: url({{ asset('/img/Menu_pic/3.jpg') }});"></div>
+			              <div class="text text-center">
+		                  <h3>Thai Fish Cakes</h3>
+				              <p><span>Fish</span>, <span>Chili</span>, <span>Lettuce</span></p>
+			              </div>
+			            </div>
+    						</div>
+    						<div class="col-md-3">
+    							<div class="featured-menus ftco-animate">
+			              <div class="menu-img img" style="background-image: url({{ asset('/img/Menu_pic/4.jpg') }});"></div>
+			              <div class="text text-center">
+		                  <h3>Satay Beef</h3>
+				              <p><span>Beef</span>, <span>Pepper</span>, <span>Chili</span>, <span>Sauce</span></p>
+			              </div>
+			            </div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
     
 
 		<section class="ftco-section ftco-wrap-about">
@@ -24,7 +73,7 @@
 	          	<span class="subheading">About</span>
 	            <h2 class="mb-4">DaShuXia Restaurant</h2>
 	          </div>
-	          <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+	          <p>A small restaurant named DaShuXia due to a big tree beside their place and protecting it from the hot sun. The story of the restaurant, "Whenever you feel tired, come to take a rest under the tree and have a meal in the restaurant. Take your time to recharge and become stronger".</p>
 						<pc class="time">
 							<span>Mon - Fri <strong>8 AM - 11 PM</strong></span>
 							<span><a href="#">+ 1-978-123-4567</a></span>
@@ -43,7 +92,7 @@
 		          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18">
 		              <div class="text">
-		                <strong class="number" data-number="18">0</strong>
+		                <strong class="number" data-number="10">0</strong>
 		                <span>Years of Experienced</span>
 		              </div>
 		            </div>
@@ -51,7 +100,7 @@
 		          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18">
 		              <div class="text">
-		                <strong class="number" data-number="100">0</strong>
+		                <strong class="number" data-number="35">0</strong>
 		                <span>Menus/Dish</span>
 		              </div>
 		            </div>
@@ -59,7 +108,7 @@
 		          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18">
 		              <div class="text">
-		                <strong class="number" data-number="50">0</strong>
+		                <strong class="number" data-number="4">0</strong>
 		                <span>Staffs</span>
 		              </div>
 		            </div>
@@ -77,7 +126,7 @@
           <div class="col-md-3 text-center text-md-left">
           	<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
           </div>
-        </div>
+        </div>  
     	</div>
     </section>
 
@@ -96,7 +145,7 @@
             		<span class="flaticon-cake"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Birthday Party</h3>
+                <h3 class="heading">Delivery</h3>
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
               </div>
             </div>      
@@ -107,7 +156,7 @@
             		<span class="flaticon-meeting"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Business Meetings</h3>
+                <h3 class="heading">Dine In</h3>
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
               </div>
             </div>    
@@ -118,7 +167,7 @@
             		<span class="flaticon-tray"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Wedding Party</h3>
+                <h3 class="heading">Event UKM</h3>
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
               </div>
             </div>      
@@ -217,7 +266,7 @@
 		</section>
 
 		
-		<section class="ftco-section testimony-section img">
+		{{-- <section class="ftco-section testimony-section img">
 			<div class="overlay"></div>
       <div class="container">
         <div class="row justify-content-center mb-5">
@@ -303,15 +352,15 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 		
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Feliciano</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="ftco-heading-2">EasyEats</h2>
+              <p>A small restaurant named DaShuXia due to a big tree beside their place and protecting it from the hot sun. The story of the restaurant, "Whenever you feel tired, come to take a rest under the tree and have a meal in the restaurant. Take your time to recharge and become stronger".</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
