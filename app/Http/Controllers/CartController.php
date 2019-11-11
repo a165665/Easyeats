@@ -72,7 +72,7 @@ class CartController extends Controller
 
         }
         $dishes =  Dish::all();
-        //return view('order.index')->with('dishes', $dishes);
+        return view('order.index')->with('dishes', $dishes);
     }
 
 

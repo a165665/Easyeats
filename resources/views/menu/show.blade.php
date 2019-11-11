@@ -14,7 +14,7 @@
     @endif
     <h1>{{$dish->name}}</h1>
 
-    <div class="row no-gutters d-flex align-items-stretch">
+    {{-- <div class="row no-gutters d-flex align-items-stretch">
   
            
         <div class="col-md-12 col-lg-6 d-flex align-self-stretch">
@@ -36,10 +36,10 @@
             </div>
             </div>
 
-    </div>
+    </div> --}}
 
     
-{{--             <table>
+           <table>
                 <tr>
                     <th>Name</th>
                     <th>Price</th>
@@ -50,5 +50,5 @@
                     <th>{{$dish->price}}</th>
                     <th>{{$dish->category}}</th>
                 </tr>
-            </table>   --}}                  
+            </table>                
 @endsection

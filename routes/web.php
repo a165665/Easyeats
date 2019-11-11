@@ -25,7 +25,7 @@ Route::get('/owner', 'HomeController@ownerIndex')->name('owner');
 Route::resource('/menu', 'DishController');
 
 Route::get('/order', 'CartController@index');
-Route::post('/store', 'CartController@create');
+Route::post('/order', 'CartController@create');
 Route::get('/cart', 'CartController@viewCart');
 
  Route::get('/mainmenu', function () {

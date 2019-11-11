@@ -33,6 +33,7 @@
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             @if (Auth::user()->user_type == 'owner')
+                            <a class="dropdown-item" href="/menu">Menu</a>
                             <a class="dropdown-item" href="/menu/create">Add dish</a>
                             @else
                             <a class="dropdown-item" href="/cart">View Cart</a>

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@include('layouts.jquery')
 @section('content')
     <h1>Create Dishes</h1>
     {!! Form::open(['action' => 'DishController@store', 'method' => 'POST']) !!}
