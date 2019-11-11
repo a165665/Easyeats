@@ -28,9 +28,9 @@ Route::get('/order', 'CartController@index');
 Route::post('/order', 'CartController@create');
 Route::get('/cart', 'CartController@viewCart');
 
- Route::get('/mainmenu', function () {
-     return view('mainmenu');
- });
+Route::get('/mainmenu', function () {
+    return view('mainmenu');
+});
 
 
 
