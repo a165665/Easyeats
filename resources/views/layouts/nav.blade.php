@@ -36,6 +36,7 @@
                             <a class="dropdown-item" href="/menu">Menu</a>
                             <a class="dropdown-item" href="/menu/create">Add dish</a>
                             @else
+                            <a class="dropdown-item" href="/menu">Menu</a>
                             <a class="dropdown-item" href="/cart">View Cart</a>
                             <a class="dropdown-item" href="/order">Order</a>
                             @endif

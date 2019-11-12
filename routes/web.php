@@ -23,10 +23,13 @@ Route::get('/', function(){
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/owner', 'HomeController@ownerIndex')->name('owner');
 Route::resource('/menu', 'DishController');
+Route::resource('/cart', 'CartController');
+Route::get('/order', 'CartController@order');
 
-Route::get('/order', 'CartController@index');
-Route::post('/order', 'CartController@create');
-Route::get('/cart', 'CartController@viewCart');
+// Route::get('/order', 'CartController@index');
+// Route::post('/order', 'CartController@create');
+// Route::get('/cart', 'CartController@viewCart');
+// Route::post('/cart', 'CartController@update');
 
 Route::get('/mainmenu', function () {
     return view('mainmenu');

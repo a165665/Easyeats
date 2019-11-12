@@ -3,7 +3,6 @@
 
 @section('content')
     <a href="/menu" class="btn btn-default">Go Back</a>
-    @if ((session('status')))
         @if (Auth::user()->user_type == 'owner')
         <a href="/menu/{{$dish->id}}/edit" class="btn btn-default">Edit</a>
         {!!Form::open(['action' => ['DishController@destroy', $dish->id], 'method' => 'POST'])!!}
@@ -11,7 +10,6 @@
             {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
         {!!Form::close()!!}
         @endif
-    @endif
     <h1>{{$dish->name}}</h1>
 
     {{-- <div class="row no-gutters d-flex align-items-stretch">

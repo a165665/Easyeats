@@ -77,6 +77,8 @@ class DishController extends Controller
     public function show($id)
     {
         $dish = Dish::find($id);
+        // $user_level = Auth::user()->user_type;
+        // return $user_level;
         return view('menu.show')->with('dish', $dish);
     }
 

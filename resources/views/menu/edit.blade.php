@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@include('layouts.jquery')
 
 @section('content')
     <h1>Update Dishes</h1>
