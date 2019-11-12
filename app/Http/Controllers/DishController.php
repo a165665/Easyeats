@@ -21,8 +21,13 @@ class DishController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $dishes =  Dish::all();
+    {   
+        if(request()->has('category')){
+            $dishes =  Dish::where('category', request('category'))->paginate(5)->appends('category', request('category'));
+            //return $dishes;
+        }else{
+        $dishes =  Dish::paginate(5);
+        }
         return view('menu.index')->with('dishes', $dishes);
     }
 

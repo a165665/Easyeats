@@ -4,6 +4,13 @@
     <h1>Menu</h1>
     
     @if (count($dishes) > 0)
+        <a href="menu?category=Beef">Beef</a>|
+        <a href="menu?category=Appetisers">Appetisers</a>|
+        <a href="menu?category=Chicken">Chicken</a>|
+        <a href="menu?category=Soup">Soup</a>|
+        <a href="menu?category=Seafood">Seafood</a>|
+        {{-- <a href="menu?category=Pork">Non Halal</a>| --}}
+        <a href="/menu">All</a>
     <div class="row no-gutters d-flex align-items-stretch">
         @foreach ($dishes as $dish)
            
@@ -40,6 +47,7 @@
             </table> --}}
                 
         @endforeach
+        {!! $dishes->render()!!}
     </div>
     @endif
 

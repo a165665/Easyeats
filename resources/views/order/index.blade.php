@@ -30,9 +30,7 @@
                             <a href="/menu/{{$dish->id}}" class="btn btn-primary">Details</a>
                         {!! Form::close() !!}
                     </th>
-                </tr>
-           
-                
+                </tr>               
         @endforeach
     </table>
     </div>
