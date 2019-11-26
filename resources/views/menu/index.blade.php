@@ -1,16 +1,39 @@
 @extends('layouts.app')
 @include('layouts.nav')
 @section('content')
-    <h1>Menu</h1>
+    
     
     @if (count($dishes) > 0)
-        <a href="menu?category=Beef">Beef</a>|
+    <section class="ftco-section">
+    	<div class="container">
+          <h1>Menu</h1>
+        <div class="ftco-search">
+
+    <div class="col-md-12 nav-link-wrap">
+      <div class="nav nav-pills d-flex text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link ftco-animate" href="/menu" role="tab"ria-selected="false">All</a>
+
+        <a class="nav-link ftco-animate" href="menu?category=Appetisers" role="tab" aria-selected="false">Appetisers</a>
+
+        <a class="nav-link ftco-animate" href="menu?category=Chicken" role="tab"aria-selected="false">Chicken</a>
+
+        <a class="nav-link ftco-animate" href="menu?category=Beef" role="tab" aria-selected="false">Beef</a>
+
+        <a class="nav-link ftco-animate" href="menu?category=Soup" role="tab"aria-selected="false">Soup</a>
+
+        <a class="nav-link ftco-animate" href="menu?category=Seafood" role="tab" aria-selected="false">Seafood</a>
+
+      </div>
+    </div>
+
+{{--         <a href="menu?category=Beef">Beef</a>|
         <a href="menu?category=Appetisers">Appetisers</a>|
         <a href="menu?category=Chicken">Chicken</a>|
         <a href="menu?category=Soup">Soup</a>|
         <a href="menu?category=Seafood">Seafood</a>|
-        {{-- <a href="menu?category=Pork">Non Halal</a>| --}}
+
         <a href="/menu">All</a>
+       --}}  
     <div class="row no-gutters d-flex align-items-stretch">
         @foreach ($dishes as $dish)
            
@@ -47,9 +70,19 @@
             </table> --}}
                 
         @endforeach
-        {!! $dishes->render()!!}
+      
     </div>
     @endif
+      {{-- --------- --}}
+        </div>
+      </div>
+      <hr>
+      <div class="row align-items-center justify-content-center" >
+          {!! $dishes->render()!!}
+          </div>
+    </section>
+    
+    
 
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 

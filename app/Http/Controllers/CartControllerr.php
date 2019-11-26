@@ -76,7 +76,7 @@ class CartController extends Controller
 
         }
         $dishes =  Dish::all();
-        return redirect('order')->with('success','Dish Added to Cart');
+        return redirect()->back()->with('success','Dish Added to Cart');
     }
 
     // Update Dish

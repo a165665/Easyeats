@@ -10,7 +10,7 @@
                 <th>Name</th>
                 <th>Picture</th>
                 <th>Quantity</th>
-                <th>Price</th>
+                <th>Subtotal</th>
                 <th>Details</th>
             </tr>
             @php
@@ -18,7 +18,10 @@
             @endphp
         @foreach ($orders as $order)              
                 <tr>
-                    <th>{{$order->dish->name}}</th>
+                    <th>{{$order->dish->name}}
+                        <br>
+                        RM{{$order->dish->price}}
+                    </th>
                     <th width="20%"><img src="{{ asset('/img/Menu_pic/'.$order->dish_id.'.jpg') }}"class="img-fluid img-thumbnail" width="60%" height="60%"/></th>
                     <th>{{$order->quantity}}</th>
                     @php

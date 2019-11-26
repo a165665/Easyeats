@@ -23,10 +23,10 @@ class DishController extends Controller
     public function index()
     {   
         if(request()->has('category')){
-            $dishes =  Dish::where('category', request('category'))->paginate(5)->appends('category', request('category'));
+            $dishes =  Dish::where('category', request('category'))->paginate(10)->appends('category', request('category'));
             //return $dishes;
         }else{
-        $dishes =  Dish::paginate(5);
+        $dishes =  Dish::where('category','!=','NonHalal')->paginate(10);
         }
         return view('menu.index')->with('dishes', $dishes);
     }
