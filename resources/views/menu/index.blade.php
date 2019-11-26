@@ -23,6 +23,8 @@
 
         <a class="nav-link ftco-animate" href="menu?category=Seafood" role="tab" aria-selected="false">Seafood</a>
 
+        <a class="nav-link ftco-animate" href="menu?category=nonHalal" role="tab" aria-selected="false">Non Halal</a>
+
       </div>
     </div>
 

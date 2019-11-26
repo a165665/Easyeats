@@ -16,7 +16,7 @@ class Cart extends Model
     public $timestamps = true;
 
     public function user(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User',);
     }
 
     public function orderDetails(){

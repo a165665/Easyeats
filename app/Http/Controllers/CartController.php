@@ -27,8 +27,25 @@ class CartController extends Controller
     }
 
     public function order(){
-        $dishes =  Dish::all();
+
+        if(request()->has('category')){
+            $dishes =  Dish::where('category', request('category'))->paginate(10)->appends('category', request('category'));
+            //return $dishes;
+        }
+        else{
+            $dishes =  Dish::where('category','!=','NonHalal')->paginate(10);
+            }
+
+       /*  $dishes =  Dish::paginate(10); */
         return view('order.index')->with('dishes', $dishes);
+    }
+
+    public function orderlist(){
+        $user_id = Auth::user()->id;   
+        $cart = Cart::where('status','Pending')->get();
+        //$orders = $cart->orderDetails;
+        //return $orders;
+        return view('order.orderlist')->with('orders', $cart);
     }
 
     /**
