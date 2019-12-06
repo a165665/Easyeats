@@ -47,7 +47,7 @@
                     <th>
                         {!! Form::open(['action' => 'CartController@store', 'method' => 'POST']) !!}
                             <div class="form-group">
-                                {{Form::number('quantity', '', ['class' => 'form-control', 'placeholder' =>'Dish Quantity', 'min' => '1'])}}
+                                {{Form::number('quantity', '', ['class' => 'form-control', 'placeholder' =>'Dish Quantity', 'min' => '1', 'required'])}}
                             </div>
                             {{Form::hidden('dish_id',$dish->id)}}
                             {{Form::submit('Add to cart', ['class' => 'btn btn-primary'])}}

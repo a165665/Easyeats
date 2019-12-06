@@ -32,7 +32,7 @@
                         {!! Form::open(['action' => ['CartController@update', $order->dish_id], 'method' => 'PUT']) !!}
                             <div class="form-group">
                                 {{Form::label('quantity', 'Quantity')}}
-                                {{Form::number('quantity', $order->quantity, ['class' => 'form-control', 'placeholder' =>'Quantity', 'min' => '1'])}}
+                                {{Form::number('quantity', $order->quantity, ['class' => 'form-control', 'placeholder' =>'Quantity', 'min' => '1', 'required'])}}
                             </div>
                             {{Form::hidden('_method','PUT')}}
                             {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
@@ -56,7 +56,11 @@
                     <th>Pay </th>
                 </tr>
         </table>
-    </div>
+    </div>       
+    @else
+        <div class="container-fluid">
+            <p>Your cart is empty now. Click <a href="/order">here</a> to add order</p>
+        </div>
         
     @endif
 @endsection

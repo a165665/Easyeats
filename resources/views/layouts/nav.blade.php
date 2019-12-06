@@ -35,6 +35,7 @@
                             @if (Auth::user()->user_type == 'owner')
                             <a class="dropdown-item" href="/menu">Menu</a>
                             <a class="dropdown-item" href="/menu/create">Add dish</a>
+                            <a class="dropdown-item" href="/orderlist">Order List</a>
                             @else
                             <a class="dropdown-item" href="/menu">Menu</a>
                             <a class="dropdown-item" href="/cart">View Cart</a>

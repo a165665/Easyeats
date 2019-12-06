@@ -16,14 +16,26 @@ class CartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         //
         $user_id = Auth::user()->id;   
         $cart = Cart::where(['user_id' => $user_id, 'status' => 'Pending'])->first();
-        $orders = $cart->orderDetails;
-        //return $orders;
+        $status = Cart::where(['user_id' => $user_id, 'status' => 'Pending'])->get('id');
+        if(count($status) > 0){
+            $orders = $cart->orderDetails;
+        }else{
+            $orders = [];
+            return view('order.cart')->with('orders', $orders);
+        }
         return view('order.cart')->with('orders', $orders);
+
     }
 
     public function order(){
@@ -42,7 +54,8 @@ class CartController extends Controller
 
     public function orderlist(){
         $user_id = Auth::user()->id;   
-        $cart = Cart::where('status','Pending')->get();
+        $cart = Cart::where('status','Pending')->paginate(2);
+        //return $cart[1]->orderDetails;
         //$orders = $cart->orderDetails;
         //return $orders;
         return view('order.orderlist')->with('orders', $cart);
@@ -104,7 +117,7 @@ class CartController extends Controller
 
         }
         $dishes =  Dish::all();
-        return redirect('order')->with('success','Dish Added to Cart');
+        return back()->with('success','Dish Added to Cart');
     }
 
     /**
