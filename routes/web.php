@@ -24,8 +24,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/owner', 'HomeController@ownerIndex')->name('owner');
 Route::resource('/menu', 'DishController');
 Route::resource('/cart', 'CartController');
-Route::get('/order', 'CartController@order');
-Route::get('/orderlist', 'CartController@orderlist');
+Route::get('/order', 'CartController@order')->name('order');
+Route::get('/orderlist', 'CartController@orderlist')->name('orderlist');
+Route::put('/checkout/{id}','CartController@checkout')->name('checkout');
+Route::get('/receipt/{id}','CartController@receipt')->name('receipt');
+
 
 // Route::get('/order', 'CartController@index');
 // Route::post('/order', 'CartController@create');

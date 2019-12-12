@@ -53,7 +53,12 @@
                     <th></th>
                     <th>Total</th>
                     <th>RM{{$totalprice}}</th>
-                    <th>Pay </th>
+                    <th>
+                        {!!Form::open(['action' => ['CartController@checkout', $orders[0]->cart_id], 'method' => 'POST'])!!}
+                            {{Form::hidden('_method', 'PUT')}}
+                            {{Form::submit('Pay', ['class' => 'btn btn-primary'])}}
+                        {!!Form::close()!!} 
+                    </th>
                 </tr>
         </table>
     </div>       

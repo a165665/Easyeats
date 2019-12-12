@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Dish;
 use App\Cart;
 use App\User;
@@ -114,7 +115,6 @@ class CartController extends Controller
             $orderdetail->cart_id = $status2[0]['id'];
             $orderdetail->quantity = $request->input('quantity');
             $orderdetail->save();
-
         }
         $dishes =  Dish::all();
         return back()->with('success','Dish Added to Cart');
@@ -164,6 +164,8 @@ class CartController extends Controller
         return redirect('/cart')->with('success', ' Update Created');
     }
 
+    
+
     /**
      * Remove the specified resource from storage.
      *
@@ -178,5 +180,31 @@ class CartController extends Controller
         $dish = OrderDetails::where(['dish_id'=>$id, 'cart_id'=>$status[0]['id']])->first();
         $dish->delete();     
         return redirect('/cart')->with('success', ' Update Created');
+    }
+
+    public function checkout($id){
+        $cart = Cart::find($id);
+        // -------------------------------------------------------------------- calculate total price in a cart
+        $totals = OrderDetails::where(['cart_id' => $id])->get();
+        $quantity = 0;
+        foreach($totals as $total){
+            $quantity += ($total->dish->price * $total->quantity);
+        }
+        $cart->total = $quantity;
+        // ------------------------------------------------------------------------
+        //$cart->status = "Done";
+        $cart->save();
+        $orders = $cart->orderDetails;
+        $test = DB::table('orderdetails')->select(DB::raw('dish_id, sum(quantity) as total'))
+                                         ->groupBy('dish_id')->orderBy('total', 'desc')->get();
+        return $test;
+
+        return redirect()->route('receipt', ['id' => $id]);
+    }
+
+    public function receipt($id){
+        $cart = Cart::find($id);
+        $orders = $cart->orderDetails;
+        return view('/order/receipt')->with(['success' => 'Payment Successful', 'orders' => $orders]);
     }
 }
