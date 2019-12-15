@@ -15,6 +15,8 @@
 //     return view('welcome');
 // });
 
+use Carbon\Carbon;
+
 Auth::routes();
 
 Route::get('/', function(){
@@ -28,6 +30,7 @@ Route::get('/order', 'CartController@order')->name('order');
 Route::get('/orderlist', 'CartController@orderlist')->name('orderlist');
 Route::put('/checkout/{id}','CartController@checkout')->name('checkout');
 Route::get('/receipt/{id}','CartController@receipt')->name('receipt');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 
 // Route::get('/order', 'CartController@index');
@@ -35,9 +38,6 @@ Route::get('/receipt/{id}','CartController@receipt')->name('receipt');
 // Route::get('/cart', 'CartController@viewCart');
 // Route::post('/cart', 'CartController@update');
 
-Route::get('/mainmenu', function () {
-    return view('mainmenu');
-});
 
 
 

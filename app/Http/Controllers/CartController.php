@@ -9,6 +9,7 @@ use App\Dish;
 use App\Cart;
 use App\User;
 use App\OrderDetails;
+use Carbon\Carbon;
 
 class CartController extends Controller
 {
@@ -21,6 +22,8 @@ class CartController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
+
     }
 
     public function index()
@@ -35,6 +38,7 @@ class CartController extends Controller
             $orders = [];
             return view('order.cart')->with('orders', $orders);
         }
+        //dd($orders);
         return view('order.cart')->with('orders', $orders);
 
     }
@@ -79,7 +83,7 @@ class CartController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
         //
         //Check pending cart 
         $user_id = Auth::user()->id;
@@ -161,9 +165,9 @@ class CartController extends Controller
         $dish = OrderDetails::where(['dish_id'=>$id, 'cart_id'=>$status[0]['id']])->first();
         $dish->quantity = $request->input('quantity');      
         $dish->save();
-        return redirect('/cart')->with('success', ' Update Created');
+        return redirect('/cart')->with('success', ' Cart Updated');
     }
-
+        
     
 
     /**
@@ -179,7 +183,7 @@ class CartController extends Controller
         $status = Cart::where(['user_id' => $user_id, 'status' => 'Pending'])->get('id');
         $dish = OrderDetails::where(['dish_id'=>$id, 'cart_id'=>$status[0]['id']])->first();
         $dish->delete();     
-        return redirect('/cart')->with('success', ' Update Created');
+        return redirect('/cart')->with('success', 'Dish Deleted');
     }
 
     public function checkout($id){
@@ -192,14 +196,10 @@ class CartController extends Controller
         }
         $cart->total = $quantity;
         // ------------------------------------------------------------------------
-        //$cart->status = "Done";
+        $cart->status = "Done";
         $cart->save();
         $orders = $cart->orderDetails;
-        $test = DB::table('orderdetails')->select(DB::raw('dish_id, sum(quantity) as total'))
-                                         ->groupBy('dish_id')->orderBy('total', 'desc')->get();
-        return $test;
-
-        return redirect()->route('receipt', ['id' => $id]);
+       return redirect()->route('receipt', ['id' => $id]);
     }
 
     public function receipt($id){

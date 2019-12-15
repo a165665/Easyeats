@@ -33,7 +33,7 @@ class LoginController extends Controller
             return '/menu';
         }
         if($user->user_type == 'customer'){
-            return '/menu';
+            return '/';
         }
         
 
