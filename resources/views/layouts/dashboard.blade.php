@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@include('layouts.nav')
+
 
 @section('content')
     
@@ -70,7 +70,7 @@
                   @foreach ($topDishes as $topDish)
                   <tr>
                     <td>
-                      <img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">
+                      <img src="{{ asset('/img/Menu_pic/'.$topDish->dish->id.'.jpg') }}" alt="Product 1" class="img-circle img-size-32 mr-2" height="7%" width="10%">
                       {{$topDish->dish->name}}
                     </td>
                     <td>RM{{$topDish->dish->price}}</td>

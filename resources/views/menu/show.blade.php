@@ -10,8 +10,14 @@
             {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
         {!!Form::close()!!}
         @endif
-    <h1>{{$dish->name}}</h1>
+ 
+    <div class="container-fluid">
+        <h1>{{$dish->name}}</h1>
+        <div class="row align-items-center justify-content-center">
 
+    <div class="menu-img img" style="background-image: url({{ asset('/img/Menu_pic/'.$dish->id.'.jpg') }});"></div>
+    <img src="{{ asset('/img/Menu_pic/'.$dish->id.'.jpg') }}" width="40%" height="40%">
+    
     {{-- <div class="row no-gutters d-flex align-items-stretch">
   
            
@@ -36,8 +42,8 @@
 
     </div> --}}
 
-    
-           <table>
+    <div class="float-right">
+           <table class="table table-striped">
                 <tr>
                     <th>Name</th>
                     <th>Price</th>
@@ -48,5 +54,9 @@
                     <th>{{$dish->price}}</th>
                     <th>{{$dish->category}}</th>
                 </tr>
-            </table>                
+            </table>     
+        </div>     
+        </div> 
+      </div>   
+        
 @endsection

@@ -62,17 +62,17 @@
                 <div class="container">
                     <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
                         <div class="col-lg-12 d-block">
-                            <div class="row d-flex">
+                          <div class="row d-flex">
                                 <div class="col-md pr-4 d-flex topper align-items-center">
                                     <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-                                    <span class="text">+ 1235 2355 98</span>
+                                    <span class="text">+603 6273 5999</span>
                                 </div>
                                 <div class="col-md pr-4 d-flex topper align-items-center">
                                     <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
                                     <span class="text">dashuxia@gmail.com</span>
                                 </div>
                                 <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
-                                    <p class="mb-0 register-link"><span>Open hours:</span> <span>Monday - Friday</span> <span>8:00AM - 9:00PM</span></p>
+                                    <p class="mb-0 register-link"><span>Open hours:</span> <span>Monday - Saturday</span> <span>10:00AM - 4:00PM</span></p>
                                 </div>
                             </div>
                         </div>
@@ -100,76 +100,69 @@
         </main>
     </div>
     <footer class="ftco-footer ftco-bg-dark ftco-section">
-        <div class="container">
-          <div class="row mb-5">
-            <div class="col-md-6 col-lg-3">
-              <div class="ftco-footer-widget mb-4">
-                <h2 class="ftco-heading-2">EasyEats</h2>
-                <p>A small restaurant named DaShuXia due to a big tree beside their place and protecting it from the hot sun. The story of the restaurant, "Whenever you feel tired, come to take a rest under the tree and have a meal in the restaurant. Take your time to recharge and become stronger".</p>
-                <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="ftco-footer-widget mb-4">
-                <h2 class="ftco-heading-2">Open Hours</h2>
-                <ul class="list-unstyled open-hours">
-                  <li class="d-flex"><span>Monday</span><span>9:00 - 24:00</span></li>
-                  <li class="d-flex"><span>Tuesday</span><span>9:00 - 24:00</span></li>
-                  <li class="d-flex"><span>Wednesday</span><span>9:00 - 24:00</span></li>
-                  <li class="d-flex"><span>Thursday</span><span>9:00 - 24:00</span></li>
-                  <li class="d-flex"><span>Friday</span><span>9:00 - 02:00</span></li>
-                  <li class="d-flex"><span>Saturday</span><span>9:00 - 02:00</span></li>
-                  <li class="d-flex"><span>Sunday</span><span> 9:00 - 02:00</span></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-               <div class="ftco-footer-widget mb-4">
-                <h2 class="ftco-heading-2">Instagram</h2>
-                <div class="thumb d-sm-flex">
-                      <a href="#" class="thumb-menu img" style="background-image: url(images/insta-1.jpg);">
-                      </a>
-                      <a href="#" class="thumb-menu img" style="background-image: url(images/insta-2.jpg);">
-                      </a>
-                      <a href="#" class="thumb-menu img" style="background-image: url(images/insta-3.jpg);">
-                      </a>
-                  </div>
-                  <div class="thumb d-flex">
-                      <a href="#" class="thumb-menu img" style="background-image: url(images/insta-4.jpg);">
-                      </a>
-                      <a href="#" class="thumb-menu img" style="background-image: url(images/insta-5.jpg);">
-                      </a>
-                      <a href="#" class="thumb-menu img" style="background-image: url(images/insta-6.jpg);">
-                      </a>
-                  </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="ftco-footer-widget mb-4">
-                  <h2 class="ftco-heading-2">Newsletter</h2>
-                  <p>Far far away, behind the word mountains, far from the countries.</p>
-                <form action="#" class="subscribe-form">
-                  <div class="form-group">
-                    <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
-                    <input type="submit" value="Subscribe" class="form-control submit px-3">
-                  </div>
-                </form>
-              </div>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">EasyEats</h2>
+              <p>A small restaurant named DaShuXia due to a big tree beside their place and protecting it from the hot sun. The story of the restaurant, "Whenever you feel tired, come to take a rest under the tree and have a meal in the restaurant. Take your time to recharge and become stronger".</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12 text-center">
-  
-              <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Open Hours</h2>
+              <ul class="list-unstyled open-hours">
+                <li class="d-flex"><span>Monday</span><span>10:00 - 16:00</span></li>
+                <li class="d-flex"><span>Tuesday</span><span>10:00 - 16:00</span></li>
+                <li class="d-flex"><span>Wednesday</span><span>10:00 - 16:00</span></li>
+                <li class="d-flex"><span>Thursday</span><span>10:00 - 16:00</span></li>
+                <li class="d-flex"><span>Friday</span><span>10:00 - 16:00</span></li>
+                <li class="d-flex"><span>Saturday</span><span>10:00 - 16:00</span></li>
+                <li class="d-flex"><span>Sunday</span><span>10:00 - 16:00</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Current Time</h2>
+              <div class="thumb d-sm-flex">
+					<p><script>
+						var today = new Date();
+						var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+						var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+			
+					document.write(time);
+					document.write("<br>");
+					document.write(date);
+					</script></p>
+	            </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Newsletter</h2>
+            	<p>Far far away, behind the word mountains, far from the countries.</p>
+              <form action="#" class="subscribe-form">
+                <div class="form-group">
+                  <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                  <input type="submit" value="Subscribe" class="form-control submit px-3">
+                </div>
+              </form>
             </div>
           </div>
         </div>
-      </footer>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+
+          </div>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

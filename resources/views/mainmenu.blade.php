@@ -8,7 +8,7 @@
   </head>
   <body>
  
-  
+
     <!--  navbar here -->
 
     <section class="ftco-section ftco-no-pt ftco-no-pb">
@@ -65,8 +65,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 d-flex">
-						<div class="img img-1 mr-md-2" style="background-image: url(images/about.jpg);"></div>
-						<div class="img img-2 ml-md-2" style="background-image: url(images/about-1.jpg);"></div>
+						<div class="img img-1 mr-md-2" style="background-image: url({{ asset('/img/DaShuXia.jpg') }});"></div>
+{{-- 						<div class="img img-2 ml-md-2" style="background-image: url(images/about-1.jpg);"></div> --}}
 					</div>
 					<div class="col-md-5 wrap-about pt-5 pt-md-5 pb-md-3 ftco-animate">
 	          <div class="heading-section mb-4 my-5 my-md-0">
@@ -75,8 +75,8 @@
 	          </div>
 	          <p>A small restaurant named DaShuXia due to a big tree beside their place and protecting it from the hot sun. The story of the restaurant, "Whenever you feel tired, come to take a rest under the tree and have a meal in the restaurant. Take your time to recharge and become stronger".</p>
 						<pc class="time">
-							<span>Mon - Fri <strong>8 AM - 11 PM</strong></span>
-							<span><a href="#">+ 1-978-123-4567</a></span>
+							<span>Mon - Sat <strong>10 AM - 4 PM</strong></span>
+							<span><a href="#">+603 6273 5999</a></span>
 						</p>
 					</div>
 				</div>
@@ -187,7 +187,7 @@
 				<div class="row">
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
-							<div class="img" style="background-image: url(images/chef-4.jpg);"></div>
+							<div class="img" style="background-image: url({{ asset('/img/Owner.jpg') }});"></div>
 							<div class="text pt-4">
 								<h3>Alice Ho Jee Lan</h3>
 								<span class="position mb-2">Restaurant Owner</span>
@@ -206,9 +206,9 @@
 					</div>
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
-							<div class="img" style="background-image: url(images/chef-2.jpg);"></div>
+							<div class="img" style="background-image: url({{ asset('/img/Chef.jpg') }});"></div>
 							<div class="text pt-4">
-								<h3>Rebeca Welson</h3>
+								<h3>Uncle Chen</h3>
 								<span class="position mb-2">Head Chef</span>
 								<!-- <p>A small river named Duden flows by their place and supplies</p> -->
 								<div class="faded">
@@ -225,10 +225,10 @@
 					</div>
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
-							<div class="img" style="background-image: url(images/chef-3.jpg);"></div>
+							<div class="img" style="background-image: url({{ asset('/img/Staff1.jpg') }});"></div>
 							<div class="text pt-4">
-								<h3>Kharl Branyt</h3>
-								<span class="position mb-2">Chef</span>
+								<h3>Patricia</h3>
+								<span class="position mb-2">Staff</span>
 								<!-- <p>A small river named Duden flows by their place and supplies</p> -->
 								<div class="faded">
 									<!-- <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p> -->
@@ -244,10 +244,10 @@
 					</div>
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
-							<div class="img" style="background-image: url(images/chef-1.jpg);"></div>
+							<div class="img" style="background-image: url({{ asset('/img/Staff2.jpg') }});"></div>
 							<div class="text pt-4">
-								<h3>Luke Simon</h3>
-								<span class="position mb-2">Chef</span>
+								<h3>Luke Chan</h3>
+								<span class="position mb-2">Staff</span>
 								<!-- <p>A small river named Duden flows by their place and supplies</p> -->
 								<div class="faded">
 									<!-- <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p> -->
@@ -265,7 +265,6 @@
 			</div>
 		</section>
 
-		
 		{{-- <section class="ftco-section testimony-section img">
 			<div class="overlay"></div>
       <div class="container">
@@ -372,34 +371,29 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Open Hours</h2>
               <ul class="list-unstyled open-hours">
-                <li class="d-flex"><span>Monday</span><span>9:00 - 24:00</span></li>
-                <li class="d-flex"><span>Tuesday</span><span>9:00 - 24:00</span></li>
-                <li class="d-flex"><span>Wednesday</span><span>9:00 - 24:00</span></li>
-                <li class="d-flex"><span>Thursday</span><span>9:00 - 24:00</span></li>
-                <li class="d-flex"><span>Friday</span><span>9:00 - 02:00</span></li>
-                <li class="d-flex"><span>Saturday</span><span>9:00 - 02:00</span></li>
-                <li class="d-flex"><span>Sunday</span><span> 9:00 - 02:00</span></li>
+                <li class="d-flex"><span>Monday</span><span>10:00 - 16:00</span></li>
+                <li class="d-flex"><span>Tuesday</span><span>10:00 - 16:00</span></li>
+                <li class="d-flex"><span>Wednesday</span><span>10:00 - 16:00</span></li>
+                <li class="d-flex"><span>Thursday</span><span>10:00 - 16:00</span></li>
+                <li class="d-flex"><span>Friday</span><span>10:00 - 16:00</span></li>
+                <li class="d-flex"><span>Saturday</span><span>10:00 - 16:00</span></li>
+                <li class="d-flex"><span>Sunday</span><span>10:00 - 16:00</span></li>
               </ul>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Instagram</h2>
+              <h2 class="ftco-heading-2">Current Time</h2>
               <div class="thumb d-sm-flex">
-	            	<a href="#" class="thumb-menu img" style="background-image: url(images/insta-1.jpg);">
-	            	</a>
-	            	<a href="#" class="thumb-menu img" style="background-image: url(images/insta-2.jpg);">
-	            	</a>
-	            	<a href="#" class="thumb-menu img" style="background-image: url(images/insta-3.jpg);">
-	            	</a>
-	            </div>
-	            <div class="thumb d-flex">
-	            	<a href="#" class="thumb-menu img" style="background-image: url(images/insta-4.jpg);">
-	            	</a>
-	            	<a href="#" class="thumb-menu img" style="background-image: url(images/insta-5.jpg);">
-	            	</a>
-	            	<a href="#" class="thumb-menu img" style="background-image: url(images/insta-6.jpg);">
-	            	</a>
+					<p><script>
+						var today = new Date();
+						var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+						var time = today.getHours() + ":" + today.getMinutes("00") + ":" + today.getSeconds()
+			
+					document.write(time);
+					document.write("<br>");
+					document.write(date);
+					</script></p>
 	            </div>
             </div>
           </div>
@@ -419,9 +413,7 @@
         <div class="row">
           <div class="col-md-12 text-center">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+
           </div>
         </div>
       </div>
